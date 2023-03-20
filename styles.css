@@ -1,0 +1,47 @@
+button {
+  background-color: rgb(60, 179, 113);
+  border-color: rgb(60, 179, 113);
+  border-radius: 2px;
+  border-width: 1px;
+  padding: 12px 30px;
+  text-size-adjust: 10px;
+  border: none;
+}
+
+::placeholder {
+  color: black;
+}
+
+#resetbtn {
+  background-color: red;
+  border-color: red;
+	left: 242px;
+	top: 8px;
+	position: absolute;
+}
+.box {
+      border: 2px solid black;
+			outline: 0px solid black;
+      width: 200px;
+      height: 150px;
+    }
+#hotkey {
+		width: 10px;
+		left: 100px;
+		position: absolute;
+	}
+	#savesettings {
+		left: 100px;
+		top: 8px;
+		position: absolute;
+	}
+	#getClasses {
+		left: 152px;
+		top: 124px;
+		position: absolute;
+	}
+	#settingsbtn {
+		left: 288px;
+		top: 124px;
+		position: absolute;
+	}

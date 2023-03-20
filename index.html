@@ -1,0 +1,53 @@
+<html>
+
+  <head>
+    <link rel='stylesheet' herf='styles.css'>
+    <title>Does this matter?</title>
+  </head>
+
+  <body onload='load()'>
+    <div id='main'>
+      <p>
+        <a id='a'></a>
+      </p>
+      <p>
+        <a id='day'></a>
+      </p>
+      <p>
+        Hold <a id='hotKey'>enter</a> to fast load.
+      </p>
+      <button onclick=changePage() id='changepage'>Change Page</button>
+      <form id='classes'>
+        <input type="text" id='c1' placeholder='First Class'>
+        <input type="text" id='c2' placeholder='Second Class'>
+        <input type="text" id='c3' placeholder='Third Class'>
+        <input type="text" id='c4' placeholder='Fourth Class'>
+      </form>
+      <button onclick='getClasses()' id='getClasses'>Set Classes</button>
+      <button onclick='changeTab(1)' id='settingsbtn'>Options</button>
+    </div>
+    <div id='options' style>
+      <button onclick='changeTab(0)'>Back</button>
+      <p>
+      </p>
+      Auto load with hotkey: <input type='checkbox' id='autoload' onclick='testCheckbox()'>
+      <p>
+
+      </p>
+			<div class='box'>
+			<p>
+			 Hotkey (must be alphanumeric)
+			</p>
+		   <input type='text' id='hotkey' onclick='getKey()'>
+		 </div>
+      <button onclick='saveSettings()' id='savesettings'>Save settings
+      </button>
+      <p>
+
+      </p>
+      <button onclick='reset()' id='resetbtn'>Reset Classes</button>
+    </div>
+    <script src='script.js'></script>
+  </body>
+
+</html>
