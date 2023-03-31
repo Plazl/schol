@@ -1,11 +1,9 @@
 <html>
-
   <head>
-	  <style rel='stylesheet' herf='styles.css'></style>
+    <link rel='stylesheet' herf='page.css'>
     <title>Does this matter?</title>
   </head>
-
-  <body onload='load()'>
+  <body onload='updateWindow()' style=display:none id='body'>
     <div id='main'>
       <p>
         <a id='a'></a>
@@ -14,17 +12,25 @@
         <a id='day'></a>
       </p>
       <p>
-        Hold <a id='hotKey'>enter</a> to fast load.
+        Hold <b id='hotKey'>enter</b> to fast load.
       </p>
       <button onclick=changePage() id='changepage'>Change Page</button>
-      <form id='classes'>
-        <input type="text" id='c1' placeholder='First Class'>
-        <input type="text" id='c2' placeholder='Second Class'>
-        <input type="text" id='c3' placeholder='Third Class'>
-        <input type="text" id='c4' placeholder='Fourth Class'>
+      <form>
+			  <select id='classNum' onclick='editClass()'>
+				<option type="text" id='class1' onclick='editClass("c1")'>1st Class</option>
+				<option type="text" id='class2' onclick='editClass("c2")'>2nd Class</option>
+				<option type="text" id='class3' onclick='editClass("c3")'>3rd Class</option>
+				<option type="text" id='class4' onclick='editClass("c4")'>4th Class</option>
+				</select>
+				</form>
+				<form id='classes'>
+				 <input id='c1' placeholder='First Class'>
+				 <input id='c2' placeholder='Second Class'>
+				 <input id='c3' placeholder='Third Class'>
+				 <input id='c4' placeholder='Fourth Class'>
       </form>
       <button onclick='getClasses()' id='getClasses'>Set Classes</button>
-      <button onclick='changeTab(1)' id='settingsbtn'>Options</button>
+      <button onclick='changeTab(1)'>Options</button>
     </div>
     <div id='options' style>
       <button onclick='changeTab(0)'>Back</button>
@@ -34,20 +40,54 @@
       <p>
 
       </p>
-			<div class='box'>
-			<p>
-			 Hotkey (must be alphanumeric)
-			</p>
-		   <input type='text' id='hotkey' onclick='getKey()'>
-		 </div>
-      <button onclick='saveSettings()' id='savesettings'>Save settings
+      Hotkey (must be alphanumeric): <input type='text' id='hotkey' onclick='getKey()'>
+      <button onclick='saveSettings()'>Save settings
       </button>
       <p>
 
       </p>
       <button onclick='reset()' id='resetbtn'>Reset Classes</button>
-    </div>
-    <script src='script.js'></script>
-  </body>
+     <p>
 
+      </p>
+      <button onclick='resetSettings()' id='resetsettings'>Reset Settings</button>
+    </div>
+    <script src='main.js'></script>
+    <script>
+      var time = new Date()
+      var hour;
+      var minute;
+      var day;
+      var z;
+      var x;
+      var c1;
+      var c2;
+      var c3;
+      var c4;
+      var mainTab = document.getElementById('main')
+      var optionsTab = document.getElementById('options')
+      var checkbox = document.getElementById('autoload')
+      var autoload;
+      var hotkeyelement = document.getElementById('hotkey')
+      var keybind;
+      var key = hotkeyelement.value;
+      var days = {
+        'Monday': 0,
+        'Tuesday': 1,
+        'Wednesday': 2,
+        'Thursday': 3,
+        'Friday': 4
+      }
+      var daymin = 1
+      var daymax = 4
+      var day1 = time.getDay();
+      var day2;
+      var dayNum = 1
+      setInterval(function(resetDay) {
+        if (day1 == 7) {
+          day1 = 1
+        }
+      }, 1000)
+    </script>
+  </body>
 </html>
