@@ -8,6 +8,10 @@ button {
   border: none;
 }
 
+input {
+  border-radius: 3px;
+}
+
 ::placeholder {
   color: black;
 }
@@ -15,33 +19,44 @@ button {
 #resetbtn {
   background-color: red;
   border-color: red;
-	left: 242px;
-	top: 8px;
-	position: absolute;
 }
-.box {
-      border: 2px solid black;
-			outline: 0px solid black;
-      width: 200px;
-      height: 150px;
-    }
-#hotkey {
-		width: 10px;
-		left: 100px;
-		position: absolute;
-	}
-	#savesettings {
-		left: 100px;
-		top: 8px;
-		position: absolute;
-	}
-	#getClasses {
-		left: 152px;
-		top: 124px;
-		position: absolute;
-	}
-	#settingsbtn {
-		left: 288px;
-		top: 124px;
-		position: absolute;
-	}
+
+#resetsettings {
+  background-color: red;
+  border-color: red;
+  position: absolute;
+  left: 160px;
+  top: 157px;
+}
+
+#c1 {
+  position: absolute;
+  left: 90px;
+  top: 164px;
+  border-width: 1px;
+}
+
+#c2 {
+  position: absolute;
+  left: 90px;
+  top: 164px;
+  border-width: 1px;
+}
+
+#c3 {
+  position: absolute;
+  left: 90px;
+  top: 164px;
+  border-width: 1px;
+}
+
+#c4 {
+  position: absolute;
+  left: 90px;
+  top: 164px;
+  border-width: 1px;
+}
+
+body {
+  overflow-y: hidden;
+}
