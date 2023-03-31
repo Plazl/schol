@@ -53,41 +53,5 @@
       <button onclick='resetSettings()' id='resetsettings'>Reset Settings</button>
     </div>
     <script src='main.js'></script>
-    <script>
-      var time = new Date()
-      var hour;
-      var minute;
-      var day;
-      var z;
-      var x;
-      var c1;
-      var c2;
-      var c3;
-      var c4;
-      var mainTab = document.getElementById('main')
-      var optionsTab = document.getElementById('options')
-      var checkbox = document.getElementById('autoload')
-      var autoload;
-      var hotkeyelement = document.getElementById('hotkey')
-      var keybind;
-      var key = hotkeyelement.value;
-      var days = {
-        'Monday': 0,
-        'Tuesday': 1,
-        'Wednesday': 2,
-        'Thursday': 3,
-        'Friday': 4
-      }
-      var daymin = 1
-      var daymax = 4
-      var day1 = time.getDay();
-      var day2;
-      var dayNum = 1
-      setInterval(function(resetDay) {
-        if (day1 == 7) {
-          day1 = 1
-        }
-      }, 1000)
-    </script>
   </body>
 </html>
