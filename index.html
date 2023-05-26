@@ -20,8 +20,10 @@ input {
 }
 
 #resetbtn {
+  position: absolute;
   background-color: red;
   border-color: red;
+  top: 157px;
 }
 
 #resetsettings {
@@ -85,13 +87,10 @@ body {
 				<option type="text" id='class3' onclick='editClass("c3")'>3rd Class</option>
 				<option type="text" id='class4' onclick='editClass("c4")'>4th Class</option>
 				</select>
-				</form>
-				<form id='classes'>
 				 <input id='c1' placeholder='First Class'>
 				 <input id='c2' placeholder='Second Class'>
 				 <input id='c3' placeholder='Third Class'>
 				 <input id='c4' placeholder='Fourth Class'>
-      </form>
       <button onclick='getClasses()' id='getClasses'>Set Classes</button>
       <button onclick='changeTab(1)'>Options</button>
     </div>
